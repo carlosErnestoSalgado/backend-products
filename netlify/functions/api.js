@@ -84,12 +84,12 @@ const productos = [
 ];
 
 // Solicitud HTTP GET a la ruta /api/products  
-router.get('/api/products', (request, response) => {
+router.get('/products', (request, response) => {
     response.json(productos);
 })
 
 // Solicitud HTTP GET a la ruta /api/products/:id
-router.get('/api/products/:id', (request, response) => {
+router.get('/products/:id', (request, response) => {
   const id = Number(request.params.id);
   const product = productos.find(prod => prod.id === id);
   return response.json(product)
